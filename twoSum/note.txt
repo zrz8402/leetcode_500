@@ -1,0 +1,19 @@
+give:
+     int *nums;
+     int target;
+return:
+     i1 & i2
+  that
+     nums[i1] + nums[i2] == target
+
+easiest solution
+for (int i = 0; i < numsSize - 1; i++)
+     for (int j = i + 1; i < numSize; i++)
+          if (nums[i] + nums[j] == target)
+               return i,j
+
+solution 2 - hashmap(for python and c++)
+map: num-indice
+iterate:
+     if (target - current) in map
+          return indices
