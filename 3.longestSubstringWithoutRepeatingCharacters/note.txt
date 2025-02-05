@@ -1,0 +1,19 @@
+give:
+    string s
+return:
+    int length
+   that
+    longest substring & no repeating char
+
+solution 1 - sliding window + hash table  -> O(n) & O(min(n, m)) (m:charset size; n:len(str))
+
+solution 2 - sliding window + two pointers -> O(n) & O(min(m, n))
+    int charset[] -store characters currently in the window
+    for right in range(len(s))
+        while s[right] in charset[]:
+            charset remove s[left]
+            left++
+        charset add s[right]
+        track max_len -> max(max_len, right - left + 1)
+
+solution 3 - dynamic programming  -> O(n) & O(n) but more complex

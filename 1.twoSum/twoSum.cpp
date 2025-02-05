@@ -6,16 +6,16 @@
 using namespace std;
 
 vector<int> twoSum(vector<int>& nums, int target) {
-    unordered_map<int, int> num_map;
+    unordered_map<int, int> numMap;
 
     for (int i = 0; i < nums.size(); i++) {
         int complement = target - nums[i];
 
-        if (num_map.find(complement) != num_map.end()) {
-            return {num_map[complement], i};
+        if (numMap.find(complement) != numMap.end()) {
+            return {numMap[complement], i};
         }
 
-        num_map[nums[i]] = i;
+        numMap[nums[i]] = i;
     }
 
     return vector<int>{};
