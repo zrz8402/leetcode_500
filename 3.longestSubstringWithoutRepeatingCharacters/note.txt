@@ -6,6 +6,11 @@ return:
     longest substring & no repeating char
 
 solution 1 - sliding window + hash table  -> O(n) & O(min(n, m)) (m:charset size; n:len(str))
+    use hash table to record the position of the last occurence of each character
+    if is_repeated(character)
+        move left to the next position of the repeated character
+            -> left = charset[s[right]] + 1
+        or left if (left > charset[s[right]] + 1)
 
 solution 2 - sliding window + two pointers -> O(n) & O(min(m, n))
     int charset[] -store characters currently in the window
@@ -15,5 +20,3 @@ solution 2 - sliding window + two pointers -> O(n) & O(min(m, n))
             left++
         charset add s[right]
         track max_len -> max(max_len, right - left + 1)
-
-solution 3 - dynamic programming  -> O(n) & O(n) but more complex

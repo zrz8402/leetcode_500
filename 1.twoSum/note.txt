@@ -1,6 +1,6 @@
 give:
-     int *nums;
-     int target;
+     int *nums
+     int target
 return:
      i1 & i2
   that

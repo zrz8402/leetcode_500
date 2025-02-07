@@ -1,0 +1,11 @@
+give:
+    int nums[]
+return:
+    int sum
+   that
+    the subarray with the largest sum
+
+solution 1 - Kadane’s Algorithm ->  O(n) & O(1)
+    通过遍历数组，逐步计算以当前元素结尾的最大子数组和，并在遍历过程中记录全局最大值
+
+solution 2 - divide and conquer  -> O(n log n) & O(log n)
